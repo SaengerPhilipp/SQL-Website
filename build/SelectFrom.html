@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/output.css">
+    <script src="images/fontawesome.js"></script>
+    <script src="images/solid.js"></script>
+</head>
+<body class="dark:bg-indigo-900">
+    <nav class="backdrop-blur-sm sticky top-0 p-4 border-b border-slate-600 dark:border-gray-400">
+        <div class="flex justify-between">
+          <a href="index.html" class="text-slate-600 dark:text-gray-400 text-lg font-semibold">
+            SQL SELECT Tutorial
+          </a>
+          <div class="md:hidden right-0">
+            <button id="mobile-menu-button" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+          <ul class="hidden md:flex space-x-4">
+            <li><a href="SelectFrom.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Select From</a></li>
+            <li><a href="Where.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Conditions</a></li>
+            <li><a href="OrderBy.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Order By</a></li>
+            <li><a href="Select2db.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Two DB Select</a></li>
+            <li><a href="SelectXdb.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Multi DB Select</a></li>
+          </ul>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden">
+          <ul class="pt-4 pb-2">
+            <li class="p-2"><a href="SelectFrom.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Select From</a></li>
+            <li class="p-2"><a href="Where.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Conditions</a></li>
+            <li class="p-2"><a href="OrderBy.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Order By</a></li>
+            <li class="p-2"><a href="Select2db.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Two DB Select</a></li>
+            <li class="p-2"><a href="SelectXdb.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Multi DB Select</a></li>
+          </ul>
+        </div>
+    </nav>
+    
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+          var mobileMenu = document.getElementById('mobile-menu');
+          mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
     <link rel="stylesheet" href="css/output.css">
     <script src="images/fontawesome.js"></script>
     <script src="images/solid.js"></script>
@@ -49,38 +49,53 @@
     <h3 class="text-center text-slate-600 dark:text-white text-3xl font-semibold mt-16">
       Contents:
     </h3>
-    <table>
-      <tr>
-        <th>Topic</th>
-        <th>Short introduction</th>
-        <th>Learn</th>
-      </tr>
-      <tr>
-        <td>Select From</td>
-        <td>Learn how to use the SElECT command together with FROM to display a database table or specific columns of a database table</td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Conditions</td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Order By</td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Two DB Select</td>
-        <td></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td>Multi DB Select</td>
-        <td></td>
-        <td></td>
-      </tr>
-    </table>
+    <div class="flex justify-center">
+      <table class="mt-6 text-center border-separate border-spacing-0 border-2 border-slate-600 dark:border-blue-400 rounded">
+        <tr>
+          <th class="border-2 border-slate-600 text-slate-600 dark:border-blue-400 dark:text-white p-3 font-bold text-xl">Topic</th>
+          <th class="border-2 border-slate-600 text-slate-600 dark:border-blue-400 dark:text-white p-3 font-bold text-xl">Short introduction</th>
+          <th class="border-2 border-slate-600 text-slate-600 dark:border-blue-400 dark:text-white p-3 font-bold text-xl">Learn</th>
+        </tr>
+        <tr>
+          <td class="border-2 border-slate-600 text-slate-600 dark:border-blue-400 dark:text-white p-2">Select From</td>
+          <td class="border-2 border-slate-600 text-slate-600 dark:border-blue-400 dark:text-white p-2">Learn how to use the SElECT command together with FROM to display data out of a database table</td>
+          <td class="border-2 border-slate-600 text-slate-600 dark:border-blue-400 dark:text-white p-2"><a href="SelectFrom.html">Get started with Select From</a></td>
+        </tr>
+        <tr>
+          <td class="border-2 border-slate-600 text-slate-600 dark:border-blue-400 dark:text-white p-2">Conditions</td>
+          <td class="border-2 border-slate-600 text-slate-600 dark:border-blue-400 dark:text-white p-2">Learn how to filter the rows of a database table with the WHERE command</td>
+          <td class="border-2 border-slate-600 text-slate-600 dark:border-blue-400 dark:text-white p-2"><a href="Where.html">Get started with Conditions</a></td>
+        </tr>
+        <tr>
+          <td class="border-2 border-slate-600 text-slate-600 dark:border-blue-400 dark:text-white p-2">Order By</td>
+          <td class="border-2 border-slate-600 text-slate-600 dark:border-blue-400 dark:text-white p-2">Learn how to sort the displayed data of a database table with the ORDER BY command</td>
+          <td class="border-2 border-slate-600 text-slate-600 dark:border-blue-400 dark:text-white p-2"><a href="OrderBy.html">Get started with Order By</a></td>
+        </tr>
+        <tr>
+          <td class="border-2 border-slate-600 text-slate-600 dark:border-blue-400 dark:text-white p-2">Two DB Select</td>
+          <td class="border-2 border-slate-600 text-slate-600 dark:border-blue-400 dark:text-white p-2">Learn how to display data from two connected database tables</td>
+          <td class="border-2 border-slate-600 text-slate-600 dark:border-blue-400 dark:text-white p-2"><a href="SelectFrom2db.html">Get Started with Two DB Select</a></td>
+        </tr>
+        <tr>
+          <td class="border-2 border-slate-600 text-slate-600 dark:border-blue-400 dark:text-white p-2">Multi DB Select</td>
+          <td class="border-2 border-slate-600 text-slate-600 dark:border-blue-400 dark:text-white p-2">Learn how to display data from multiple connected database tables</td>
+          <td class="border-2 border-slate-600 text-slate-600 dark:border-blue-400 dark:text-white p-2"><a href="SelectFromXdb.html">Get Started with Multi DB Select</a></td>
+        </tr>
+      </table>
+    </div>
+    <h3 class="text-center text-slate-600 dark:text-white text-3xl font-semibold mt-16">
+      Syntax of this page:
+    </h3>
+    <div class="flex justify-center mt-6 mb-6">
+      <div class="max-w-2xl bg-black rounded">
+        <ol class="text-center">
+          <li><p class="text-white p-2">1. Text writen in boxes like this is code like it would be in a terminal.</p></li>
+          <li><p class="text-yellow-300 p-2">2. Code that is Yellow in one of these boxes is a general variable that is used in the explanation</p></li>
+          <li><p class="text-white p-2">3. A WORD WRITTEN IN CAPITAL LETTERS LIKE THIS SENTENCE IS AN SQL COMMAND</p></li>
+          
+        </ol>
+      </div>
+    </div>
     <script>
         document.getElementById('mobile-menu-button').addEventListener('click', function () {
           var mobileMenu = document.getElementById('mobile-menu');
