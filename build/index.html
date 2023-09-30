@@ -5,117 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/output.css">
+    <script src="images/fontawesome.js"></script>
+    <script src="images/solid.js"></script>
 </head>
-<body class="bg-slate-800">
-    <nav class="backdrop-blur-lg sticky top-0 p-4">
+<body class="dark:bg-indigo-900">
+    <nav class="backdrop-blur-sm sticky top-0 p-4 border-b border-slate-600 dark:border-gray-400">
         <div class="flex justify-between">
-          <!-- Logo with a link to the index.html page -->
-          <a href="index.html" class="text-white text-lg font-semibold">
-            <!--<img src="images/sql-website-logo.jpeg" alt="Logo" class="h-8 w-8 mr-2 inline-block" />-->
+          <a href="index.html" class="text-slate-600 dark:text-gray-400 text-lg font-semibold">
             SQL SELECT Tutorial
           </a>
-      
-          <!-- Mobile Menu Button -->
           <div class="md:hidden right-0">
-            <button id="mobile-menu-button" class="text-white">
-              Menu
+            <button id="mobile-menu-button" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">
+              <i class="fa-solid fa-bars"></i>
             </button>
           </div>
-      
-          <!-- Navigation Links -->
           <ul class="hidden md:flex space-x-4">
-            <li><a href="SelectFrom.html" class="text-white">Select From</a></li>
-            <li><a href="Where.html" class="text-white">Conditions</a></li>
-            <li><a href="OrderBy.html" class="text-white">Order By</a></li>
-            <li><a href="Select2db.html" class="text-white">Two DB Select</a></li>
-            <li><a href="SelectXdb.html" class="text-white">Multi DB Select</a></li>
+            <li><a href="SelectFrom.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Select From</a></li>
+            <li><a href="Where.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Conditions</a></li>
+            <li><a href="OrderBy.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Order By</a></li>
+            <li><a href="Select2db.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Two DB Select</a></li>
+            <li><a href="SelectXdb.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Multi DB Select</a></li>
           </ul>
         </div>
-      
-        <!-- Mobile Menu (hidden by default) -->
         <div id="mobile-menu" class="hidden md:hidden">
           <ul class="pt-4 pb-2">
-            <li><a href="SelectFrom.html" class="text-white">Select From</a></li>
-            <li><a href="Where.html" class="text-white">Conditions</a></li>
-            <li><a href="OrderBy.html" class="text-white">Order By</a></li>
-            <li><a href="Select2db.html" class="text-white">Two DB Select</a></li>
-            <li><a href="SelectXdb.html" class="text-white">Multi DB Select</a></li>
+            <li class="p-2"><a href="SelectFrom.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Select From</a></li>
+            <li class="p-2"><a href="Where.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Conditions</a></li>
+            <li class="p-2"><a href="OrderBy.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Order By</a></li>
+            <li class="p-2"><a href="Select2db.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Two DB Select</a></li>
+            <li class="p-2"><a href="SelectXdb.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Multi DB Select</a></li>
           </ul>
         </div>
     </nav>
-    <p class="text-white">
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
-        test <br>
+    <h1 class="pt-20 max-w-5xl mx-auto sm:pt-24 lg:pt-32 font-extrabold text-slate-600 dark:text-blue-400 text-4xl sm:text-5xl lg:text-6xl text-center">
+      Rapidly learn anything about the SQL SELECT command  
+    </h1>
+    <p class="mt-6 lg:mt-10 max-w-3xl mx-auto text-slate-600 dark:text-white text-center text-lg">
+      A detailed tutorial on how to use the SQL SELECT command to to display the data you need out of one, two or multiple database tabels.
     </p>
+    <div class="text-center mt-6 lg:mt-10 text-lg text-white font-semibold">
+      <a href="SelectFrom.html" class="bg-slate-600 dark:bg-blue-400 p-2 rounded-lg hover:bg-slate-500 dark:hover:bg-blue-300">Get started</a>
+    </div>
+    <h3 class="text-center text-slate-600 dark:text-white text-3xl font-semibold mt-16">
+      Contents:
+    </h3>
+    <table>
+      <tr>
+        <th>Topic</th>
+        <th>Short introduction</th>
+        <th>Learn</th>
+      </tr>
+      <tr>
+        <td>Select From</td>
+        <td>Learn how to use the SElECT command together with FROM to display a database table or specific columns of a database table</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Conditions</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Order By</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Two DB Select</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Multi DB Select</td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
     <script>
         document.getElementById('mobile-menu-button').addEventListener('click', function () {
           var mobileMenu = document.getElementById('mobile-menu');
