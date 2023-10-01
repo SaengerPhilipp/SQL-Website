@@ -37,6 +37,104 @@
           </ul>
         </div>
     </nav>
+    <h2 class="text-center text-slate-600 dark:text-white text-4xl font-semibold mt-16">
+      Conditions
+    </h2>
+    <h3 class="ml-2 text-slate-600 dark:text-white text-3xl font-semibold mt-16">
+      General command:
+    </h3>
+    <div class="mt-6 flex justify-center">
+      <div class="bg-black rounded max-w-5xl w-full p-2">
+        <span class="text-white">SELECT</span>
+        <span class="text-yellow-300">columnCondition</span>
+        <br>
+        <span class="text-white">FROM</span>
+        <span class="text-yellow-300">table alias</span>
+        <br>
+        <span class="text-white">WHERE</span>
+        <span class="text-yellow-300">condition</span>
+        <span class="text-white">;</span>
+      </div>
+    </div>
+    <h3 class="ml-2 text-slate-600 dark:text-white text-3xl font-semibold mt-16">
+      Condition:
+    </h3>
+    <div class="flex justify-center">
+      <p class="text-center text-lg text-slate-600 dark:text-white mt-6 max-w-5xl">
+        A condition would look like this: instead of <span class="text-yellow-300">condition</span> we would write <span class="text-yellow-300">alias</span>.<span class="text-yellow-300">column</span> = '<span class="text-yellow-300">value</span>'. In this case <span class="text-yellow-300">value</span> defines the value an object has to have in the defined column to be displayed.  
+      </p>
+    </div>
+    <h3 class="ml-2 text-slate-600 dark:text-white text-3xl font-semibold mt-16">
+      Multiple conditions:
+    </h3>
+    <div class="flex justify-center">
+      <p class="text-center text-lg text-slate-600 dark:text-white mt-6 max-w-5xl">
+        If you want that an object has to match two or more conditions you connect thse conditios with an AND like this:   
+      </p>
+    </div>
+    <div class="mt-6 flex justify-center">
+      <div class="bg-black rounded max-w-5xl w-full p-2">
+        <span class="text-white">SELECT</span>
+        <span class="text-yellow-300">columnCondition</span>
+        <br>
+        <span class="text-white">FROM</span>
+        <span class="text-yellow-300">table alias</span>
+        <br>
+        <span class="text-white">WHERE</span>
+        <span class="text-yellow-300">condition</span>
+        <br>
+        <span class="text-white">AND</span>
+        <span class="text-yellow-300">condition2</span>
+        <span class="text-white">;</span>
+      </div>
+    </div>
+    <div class="flex justify-center">
+      <p class="text-center text-lg text-slate-600 dark:text-white mt-6 max-w-5xl">
+        If you want that an object has to match one out of two or more conditions you connect thse conditios with an OR like this:   
+      </p>
+    </div>
+    <div class="mt-6 flex justify-center">
+      <div class="bg-black rounded max-w-5xl w-full p-2">
+        <span class="text-white">SELECT</span>
+        <span class="text-yellow-300">columnCondition</span>
+        <br>
+        <span class="text-white">FROM</span>
+        <span class="text-yellow-300">table alias</span>
+        <br>
+        <span class="text-white">WHERE</span>
+        <span class="text-yellow-300">condition</span>
+        <br>
+        <span class="text-white">OR</span>
+        <span class="text-yellow-300">condition2</span>
+        <span class="text-white">;</span>
+      </div>
+    </div>
+    <h3 class="ml-2 text-slate-600 dark:text-white text-3xl font-semibold mt-16">
+      Special conditions:
+    </h3>
+    <div class="flex justify-center">
+      <p class="text-center text-lg text-slate-600 dark:text-white mt-6 max-w-5xl">
+        Instead of = you can write <, >, <=, >= and != to use greater than, smaller than, greater than or equal to, smaller than or equal, and not equal to to create a condition. Dates are in the format YYYY-MM-DD so you can also use them in conditions with greater than or smaller than comparisons. If one wants a comparison where something should be similar to something but not the same instead of = one uses LIKE or NOT LIKE and than you replace the unnecessary parts of the <span class="text-yellow-300">value</span> with a "%".
+      </p>
+    </div>
+    <h3 class="ml-2 text-slate-600 dark:text-white text-3xl font-semibold mt-16">
+      Example:
+    </h3>
+    <div class="flex justify-center">
+      <p class="text-center text-lg text-slate-600 dark:text-white mt-6 max-w-5xl">
+        In this example we have a database table called accounts with the columns id, name, surname, birthday, email, phoneNumber and password. We want to display every account where te name starts with an A and te person is born befor the year 2000. In order to do this we write the following command: 
+      </p>
+    </div>
+    <div class="mt-6 flex justify-center">
+      <div class="bg-black rounded max-w-5xl w-full p-2">
+        <p class="text-white">
+          SELECT * <br> FROM accounts a <br>WHERE a.name LIKE 'A%' <br>AND a.birthday < '2000-01-01';
+        </p>
+      </div>
+    </div>
+    <div class="text-center mt-6 lg:mt-10 text-lg text-white font-semibold mb-4">
+      <a href="OrderBy.html" class="bg-slate-600 dark:bg-blue-400 p-2 rounded-lg hover:bg-slate-500 dark:hover:bg-blue-300">Next lesson</a>
+    </div>
     <script>
         document.getElementById('mobile-menu-button').addEventListener('click', function () {
           var mobileMenu = document.getElementById('mobile-menu');
