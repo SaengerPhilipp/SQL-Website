@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/output.css">
+    <script src="images/fontawesome.js"></script>
+    <script src="images/solid.js"></script>
+</head>
+<body class="dark:bg-indigo-900">
+    <nav class="backdrop-blur-sm sticky top-0 p-4 border-b border-slate-600 dark:border-gray-400">
+        <div class="flex justify-between">
+          <a href="index.html" class="text-slate-600 dark:text-gray-400 text-lg font-semibold">
+            SQL SELECT Tutorial
+          </a>
+          <div class="md:hidden right-0">
+            <button id="mobile-menu-button" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+          <ul class="hidden md:flex space-x-4">
+            <li><a href="SelectFrom.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Select From</a></li>
+            <li><a href="Where.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Conditions</a></li>
+            <li><a href="OrderBy.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Order By</a></li>
+            <li><a href="SelectFrom2db.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Two DB Select</a></li>
+            <li><a href="SelectFromXdb.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Multi DB Select</a></li>
+          </ul>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden">
+          <ul class="pt-4 pb-2">
+            <li class="p-2"><a href="SelectFrom.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Select From</a></li>
+            <li class="p-2"><a href="Where.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Conditions</a></li>
+            <li class="p-2"><a href="OrderBy.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Order By</a></li>
+            <li class="p-2"><a href="SelectFrom2db.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Two DB Select</a></li>
+            <li class="p-2"><a href="SelectFromXdb.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Multi DB Select</a></li>
+          </ul>
+        </div>
+    </nav>
+    <h2 class="text-center text-slate-600 dark:text-white text-4xl font-semibold mt-16">
+      Two DB Select
+    </h2>
+    <h3 class="ml-2 text-slate-600 dark:text-white text-3xl font-semibold mt-16">
+      General command:
+    </h3>
+    <div class="mt-6 flex justify-center">
+      <div class="bg-black rounded max-w-5xl w-full p-2">
+        <span class="text-white">SELECT</span>
+        <span class="text-yellow-300">columnConditionDB1</span><span class="text-white">,</span>
+        <span class="text-yellow-300">columnConditionDB2</span>
+        <br>
+        <span class="text-white">FROM</span>
+        <span class="text-yellow-300">table1 alias1</span><span class="text-white">,</span>
+        <span class="text-yellow-300">table2 alias2</span>
+        <br>
+        <span class="text-white">WHERE</span>
+        <span class="text-yellow-300">conditionConnect</span>
+        <br>
+        <span class="text-white">AND</span>
+        <span class="text-yellow-300">condition</span>
+        <br>
+        <span class="text-white">ORDER BY</span>
+        <span class="text-yellow-300">orderColumn direction</span>
+        <span class="text-white">;</span>
+      </div>
+    </div>
+    <h3 class="ml-2 text-slate-600 dark:text-white text-3xl font-semibold mt-16">
+      Select From:
+    </h3>
+    <div class="flex justify-center">
+      <p class="text-center text-lg text-slate-600 dark:text-white mt-6 max-w-5xl">
+        In order to display data out of two database tables that are connected you need to give the information of both tables into the SELECT FROM part of the command. that means you add a <span class="text-yellow-300">columnCondition</span> for the second database table and you also add the name of this table with an alias behind the FROM.
+      </p>
+    </div>
+    <h3 class="ml-2 text-slate-600 dark:text-white text-3xl font-semibold mt-16">
+      conditionConnect:
+    </h3>
+    <div class="flex justify-center">
+      <p class="text-center text-lg text-slate-600 dark:text-white mt-6 max-w-5xl">
+        If two database tables are connected there is one column in each of those tables that is the same. You have to create a condition that says that the column of the one database has to equal the one of the other. In general it would look like this: '<span class="text-yellow-300">alias1</span>.<span class="text-yellow-300">columnDB1</span>' =  '<span class="text-yellow-300">alias2</span>.<span class="text-yellow-300">columnDB2</span>'
+      </p>
+    </div>
+    <h3 class="ml-2 text-slate-600 dark:text-white text-3xl font-semibold mt-16">
+      Example:
+    </h3>
+    <div class="flex justify-center">
+      <p class="text-center text-lg text-slate-600 dark:text-white mt-6 max-w-5xl">
+        In this example we have a database table called accounts with the columns id, name, surname, birthday, email, phoneNumber and password. We want to display every account where te name starts with an A and te person is born befor the year 2000. We also want to order the table alphabetically descending by the column name. We also have a secnd database table called orders which is connected to the previous one. It has the columns id_acc (which is the same as id in th accounts table) and orderedproducts. Nowwe also want to display which products the accounts ordered. In order to do this we write the following command: 
+      </p>
+    </div>
+    <div class="mt-6 flex justify-center">
+      <div class="bg-black rounded max-w-5xl w-full p-2">
+        <p class="text-white">
+          SELECT a.name, a.surname, a.birthday, o.orderedproducts <br> FROM accounts a, orders o <br>WHERE 'a.id' = 'o.id_acc' <br>AND a.name LIKE 'A%' <br>AND a.birthday < '2000-01-01' <br> ORDER BY a.name DESC;
+        </p>
+      </div>
+    </div>
+    <div class="text-center mt-6 lg:mt-10 text-lg text-white font-semibold mb-4">
+      <a href="SelectFromXdb.html" class="bg-slate-600 dark:bg-blue-400 p-2 rounded-lg hover:bg-slate-500 dark:hover:bg-blue-300">Next lesson</a>
+    </div>
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+          var mobileMenu = document.getElementById('mobile-menu');
+          mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
