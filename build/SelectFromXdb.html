@@ -25,6 +25,7 @@
             <li><a href="OrderBy.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Order By</a></li>
             <li><a href="SelectFrom2db.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Two DB Select</a></li>
             <li><a href="SelectFromXdb.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Multi DB Select</a></li>
+            <li><a href="erd.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">ERD</a></li>
           </ul>
         </div>
         <div id="mobile-menu" class="hidden md:hidden">
@@ -34,6 +35,7 @@
             <li class="p-2"><a href="OrderBy.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Order By</a></li>
             <li class="p-2"><a href="SelectFrom2db.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Two DB Select</a></li>
             <li class="p-2"><a href="SelectFromXdb.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Multi DB Select</a></li>
+            <li class="p-2"><a href="erd.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">ERD</a></li>
           </ul>
         </div>
     </nav>
@@ -91,6 +93,9 @@
           SELECT a.name, a.surname, a.birthday, o.orderedproducts, s.subscriptionmodel <br> FROM accounts a, orders o, subscribers s <br>WHERE 'a.id' = 'o.id_acc' <br>AND 'a.id' = 's.id_acc' <br>AND a.name LIKE 'A%' <br>AND a.birthday < '2000-01-01' <br> ORDER BY a.name DESC;
         </p>
       </div>ü
+    </div>
+    <div class="text-center mt-6 lg:mt-10 text-lg text-white font-semibold mb-4">
+      <a href="erd.html" class="bg-slate-600 dark:bg-blue-400 p-2 rounded-lg hover:bg-slate-500 dark:hover:bg-blue-300">Next lesson</a>
     </div>
     <script>
         document.getElementById('mobile-menu-button').addEventListener('click', function () {
