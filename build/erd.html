@@ -57,7 +57,7 @@
     <img class="mx-auto mt-6" src="images/Screenshot (6).png" alt="">
     <div class="flex justify-center">
       <p class="text-center text-lg text-slate-600 dark:text-white mt-6 max-w-5xl">
-        The line on the site of the table indicates that it is connected to another table. A connection works via a foreign key. That means one of the tables has to have a column that represents the primary key of the other table. Those are called 1:n connections because in this case in the table with the foreign key there can only be one primary key of the other table that is placed into one of the columns, but this one primary key could be in more than one columns. So one columns can only contain one primary key of the other table and therefore can only connect to one column of the other table. However the same primary key could be in infinite foreign keys therefore one column of the table without the foreign key could connect to an infinite amount of columns of the other table.
+        The line on the site of the table indicates that it is connected to another table. A connection works via a foreign key. That means one of the tables has to have a column that represents the primary key of the other table. Those are called 1:n connections because in this case in the table with the foreign key there can only be one primary key of the other table that is placed into one of the rows, but this one primary key could be in more than one row. So one row can only contain one primary key of the other table and therefore can only connect to one row of the other table. However the same primary key could be in infinite foreign keys therefore one row of the table without the foreign key could connect to an infinite amount of rows of the other table.
       </p>
     </div>
     <h3 class="ml-2 text-slate-600 dark:text-white text-3xl font-semibold mt-16">
@@ -66,31 +66,29 @@
     <img class="mx-auto mt-6" style="width: 1000px;" src="images/Screenshot (5).png" alt="">
     <div class="flex justify-center">
       <p class="text-center text-lg text-slate-600 dark:text-white mt-6 max-w-5xl">
-        If you want to connect infinite columns of one table to infinite columns of another table and the other way around. Then you need to create a N:N connection. In order to do that it is not enough to create an foreign key in one of the tables you actually you need to create a third table with foreign keys of both the other tables. However that means you can also save information about this connection in this third table.
+        If you want to connect infinite rows of one table to infinite rows of another table and the other way around you need to create a N:N connection. In order to do that it is not enough to create an foreign key in one of the tables you actually you need to create a third table with foreign keys of both the other tables. However that means you can also save information about this connection in this third table.
       </p>
     </div>
     <h3 class="ml-2 text-slate-600 dark:text-white text-3xl font-semibold mt-16">
-      :
+      Atomisation:
     </h3>
-    <!--Atomisierung 
-    multiple tables
-    anomalien-->
-
     <div class="flex justify-center">
       <p class="text-center text-lg text-slate-600 dark:text-white mt-6 max-w-5xl">
-        In this example we have a database table called accounts with the columns id, name, surname, birthday, email, phoneNumber and password. We want to display every account where te name starts with an A and te person is born befor the year 2000. We also want to order the table alphabetically descending by the column name. In order to do this we write the following command: 
+        Data that is in a database table should always be atomised because you could have problems analysing your data otherwise. That means in one column there should be only one information that you can not split up into multiple smaller informations.
       </p>
     </div>
-    <div class="mt-6 flex justify-center">
-      <div class="bg-black rounded max-w-5xl w-full p-2">
-        <p class="text-white">
-          SELECT * <br> FROM accounts a <br>WHERE a.name LIKE 'A%' <br>AND a.birthday < '2000-01-01' <br> ORDER BY a.name DESC;
-        </p>
-      </div>
+    <h3 class="ml-2 text-slate-600 dark:text-white text-3xl font-semibold mt-16">
+      Redundancy:
+    </h3>
+    <div class="flex justify-center">
+      <p class="text-center text-lg text-slate-600 dark:text-white mt-6 max-w-5xl">
+        You should try to avoid Redundancies in a database table as well because it can lead to database anomalies. For example, you are more likely to get a deletion or update anomaly because you have to change data in a lot of rows rather than in one. That means if multiple columns are connected that means that they depend on each other then they should be extracted in another table. After that, they can be connected to the other table via a 1:N connection.
+      </p>
     </div>
-    <div class="text-center mt-6 lg:mt-10 text-lg text-white font-semibold mb-4">
-      <a href="SelectFrom2db.html" class="bg-slate-600 dark:bg-blue-400 p-2 rounded-lg hover:bg-slate-500 dark:hover:bg-blue-300">Next lesson</a>
-    </div>
+    <h3 class="ml-2 text-slate-600 dark:text-white text-3xl font-semibold mt-16">
+      How it should look like:
+    </h3>
+    <img class="mx-auto mt-6 mb-4" style="width: 1350px;" src="images/Screenshot (3).png" alt="">
     <script>
         document.getElementById('mobile-menu-button').addEventListener('click', function () {
           var mobileMenu = document.getElementById('mobile-menu');
