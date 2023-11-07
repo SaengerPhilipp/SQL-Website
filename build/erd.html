@@ -48,44 +48,33 @@
     <img class="mx-auto mt-6" style="width: 334px;" src="images/Screenshot (4).png" alt="">
     <div class="flex justify-center">
         <p class="text-center text-lg text-slate-600 dark:text-white mt-6 max-w-5xl">
-          This is an ERD(entity-relationship-diagram) in the form you can create them with pgadmin 4. Public is just the folder in which the ERD is saved on the postgreSQL server. Account is the name of the table. The rest are all columns and ID is the primary key. Next to the name of the columns is the data type that can be stored in the column. The line on the site of the table indicates that it is connected to another table. A connection works via a foreign key. That means one of the tables has to have a column that represents the primary key of the other table. Those are called 1:n connections because in this case in the table with the foreign key there can only be one primary key of the other table that is placed into one of the columns, but this one primary key could be in more than one columns. So one columns can only contain one primary key of the other table and therefore can only connect to one column of the other table. However the same primary key could be in infinite foreign keys therefore one columns of the table without the foreign key could connect to an infinite amount of columns of the other table. If you want to have an
+          This is an ERD(entity-relationship-diagram) in the form you can create them with pgadmin 4. Public is just the folder in which the ERD is saved on the postgreSQL server. Account is the name of the table. The rest are all columns and ID is the primary key. Next to the name of the columns is the data type that can be stored in the column.
         </p>
       </div>
-    <div class="mt-6 flex justify-center">
-      <div class="bg-black rounded max-w-5xl w-full p-2">
-        <span class="text-white">SELECT</span>
-        <span class="text-yellow-300">columnCondition</span>
-        <br>
-        <span class="text-white">FROM</span>
-        <span class="text-yellow-300">table alias</span>
-        <br>
-        <span class="text-white">WHERE</span>
-        <span class="text-yellow-300">condition</span>
-        <br>
-        <span class="text-white">ORDER BY</span>
-        <span class="text-yellow-300">orderColumn direction</span>
-        <span class="text-white">;</span>
-      </div>
-    </div>
     <h3 class="ml-2 text-slate-600 dark:text-white text-3xl font-semibold mt-16">
-      OrderColumn:
+      1:N Connection:
     </h3>
+    <img class="mx-auto mt-6" src="images/Screenshot (6).png" alt="">
     <div class="flex justify-center">
       <p class="text-center text-lg text-slate-600 dark:text-white mt-6 max-w-5xl">
-        The variable <span class="text-yellow-300">orderColumn</span> equals <span class="text-yellow-300">alias</span>.<span class="text-yellow-300">column</span> which defines the column according to whose values the table is ordered. 
+        The line on the site of the table indicates that it is connected to another table. A connection works via a foreign key. That means one of the tables has to have a column that represents the primary key of the other table. Those are called 1:n connections because in this case in the table with the foreign key there can only be one primary key of the other table that is placed into one of the columns, but this one primary key could be in more than one columns. So one columns can only contain one primary key of the other table and therefore can only connect to one column of the other table. However the same primary key could be in infinite foreign keys therefore one column of the table without the foreign key could connect to an infinite amount of columns of the other table.
       </p>
     </div>
     <h3 class="ml-2 text-slate-600 dark:text-white text-3xl font-semibold mt-16">
-      Direction:
+      N:N Connection:
     </h3>
+    <img class="mx-auto mt-6" style="width: 1000px;" src="images/Screenshot (5).png" alt="">
     <div class="flex justify-center">
       <p class="text-center text-lg text-slate-600 dark:text-white mt-6 max-w-5xl">
-        The variable <span class="text-yellow-300">direction</span> can have either the value ASC or DESC depending on whether you like to order the table ascending or descending.
+        If you want to connect infinite columns of one table to infinite columns of another table and the other way around. Then you need to create a N:N connection. In order to do that it is not enough to create an foreign key in one of the tables you actually you need to create a third table with foreign keys of both the other tables. However that means you can also save information about this connection in this third table.
       </p>
     </div>
     <h3 class="ml-2 text-slate-600 dark:text-white text-3xl font-semibold mt-16">
-      Example:
+      Principles:
     </h3>
+    <!--Atomisierung 
+    multiple tables
+    anomalien-->
     <div class="flex justify-center">
       <p class="text-center text-lg text-slate-600 dark:text-white mt-6 max-w-5xl">
         In this example we have a database table called accounts with the columns id, name, surname, birthday, email, phoneNumber and password. We want to display every account where te name starts with an A and te person is born befor the year 2000. We also want to order the table alphabetically descending by the column name. In order to do this we write the following command: 
