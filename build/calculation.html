@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/output.css">
+    <script src="images/fontawesome.js"></script>
+    <script src="images/solid.js"></script>
+</head>
+<body class="dark:bg-indigo-900">
+    <nav class="backdrop-blur-sm sticky top-0 p-4 border-b border-slate-600 dark:border-gray-400">
+        <div class="flex justify-between">
+          <a href="index.html" class="text-slate-600 dark:text-gray-400 text-lg font-semibold">
+            SQL Tutorial
+          </a>
+          <div class="md:hidden right-0">
+            <button id="mobile-menu-button" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+          <ul class="hidden md:flex space-x-4">
+            <li><a href="SelectFrom.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Select From</a></li>
+            <li><a href="Where.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Conditions</a></li>
+            <li><a href="OrderBy.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Order By</a></li>
+            <li><a href="SelectFrom2db.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Two DB Select</a></li>
+            <li><a href="SelectFromXdb.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Multi DB Select</a></li>
+            <li><a href="erd.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">ERD</a></li>
+            <li><a href="aggregateFunctions.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Aggregate Functions</a></li>
+            <li><a href="calculation.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Calculation</a></li>
+            <li><a href="groupBy.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Group By</a></li>
+            <li><a href="insert.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Insert</a></li>
+            <li><a href="update.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Update</a></li>
+            <li><a href="delete.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Delete</a></li>
+          </ul>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden">
+          <ul class="pt-4 pb-2">
+            <li class="p-2"><a href="SelectFrom.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Select From</a></li>
+            <li class="p-2"><a href="Where.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Conditions</a></li>
+            <li class="p-2"><a href="OrderBy.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Order By</a></li>
+            <li class="p-2"><a href="SelectFrom2db.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Two DB Select</a></li>
+            <li class="p-2"><a href="SelectFromXdb.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Multi DB Select</a></li>
+            <li class="p-2"><a href="erd.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">ERD</a></li>
+            <li class="p-2"><a href="aggregateFunctions.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Aggregate Functions</a></li>
+            <li class="p-2"><a href="calculation.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Calculations</a></li>
+            <li class="p-2"><a href="groupBy.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Group By</a></li>
+            <li class="p-2"><a href="insert.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Insert</a></li>
+            <li class="p-2"><a href="update.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Update</a></li>
+            <li class="p-2"><a href="delete.html" class="text-slate-600 hover:text-slate-500 dark:text-gray-400 dark:hover:text-gray-300">Delete</a></li>
+          </ul>
+        </div>
+    </nav>
+    <h2 class="text-center text-slate-600 dark:text-white text-4xl font-semibold mt-16">
+      Calculations
+    </h2>
+    <h3 class="ml-2 text-slate-600 dark:text-white text-3xl font-semibold mt-16">
+      General command:
+    </h3>
+    <div class="mt-6 flex justify-center">
+      <div class="bg-black rounded max-w-5xl w-full p-2">
+        <span class="text-white">SELECT</span>
+        <span class="text-yellow-300">columnCondition1</span>
+        <span class="text-yellow-300">arithmeticOperator</span>
+        <span class="text-yellow-300">columnCondition2</span>
+        <span class="text-white">AS</span>
+        <span class="text-white">`</span><span class="text-yellow-300">alias</span><span class="text-white">`</span>
+        <br>
+        <span class="text-white">FROM</span>
+        <span class="text-yellow-300">table alias</span>
+        <span class="text-white">;</span>
+      </div>
+    </div>
+    <h3 class="ml-2 text-slate-600 dark:text-white text-3xl font-semibold mt-16">
+      Arithmetic Operator:
+    </h3>
+    <div class="flex justify-center">
+      <p class="text-center text-lg text-slate-600 dark:text-white mt-6 max-w-5xl">
+        By using a <span class="text-yellow-300">arithmaticOperator</span> as *, +, / or - you can display the product, sum, ratio or difference of one or more columns. You can also use this in a condition.
+      </p>
+    </div> 
+    <h3 class="ml-2 text-slate-600 dark:text-white text-3xl font-semibold mt-16">
+      Example:
+    </h3>
+    <div class="flex justify-center">
+      <p class="text-center text-lg text-slate-600 dark:text-white mt-6 max-w-5xl">
+        In this example we have a database table called accounts with the columns id, name, surname, birthday, email, phoneNumber, password, giftCardBalance and money. We want to display the amount of money that is on the account in form of money and gift cards combined. In order to do this we write the following command: 
+      </p>
+    </div>
+    <div class="mt-6 flex justify-center">
+      <div class="bg-black rounded max-w-5xl w-full p-2">
+        <p class="text-white">
+          SELECT a.giftCardBalance + a.money AS `money combinded` <br> FROM accounts a;
+        </p>
+      </div>
+    </div>
+    <div class="text-center mt-6 lg:mt-10 text-lg text-white font-semibold mb-4">
+      <a href="groupBy.html" class="bg-slate-600 dark:bg-blue-400 p-2 rounded-lg hover:bg-slate-500 dark:hover:bg-blue-300">Next lesson</a>
+    </div>
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+          var mobileMenu = document.getElementById('mobile-menu');
+          mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
